@@ -1,2 +1,8 @@
 TULIS NAMA KALIAN
-1. Wia Handayani
+<<<<<<< HEAD
+=======
+1.Hafidh Almarogi
+2. Herdiana
+3.Saeful mizwar
+4.Wia Handayani
+>>>>>>> 6f029f88ba6f17833b31b2360a37ab00c3e68dc9
