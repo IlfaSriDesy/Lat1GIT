@@ -1,0 +1,4 @@
+printf("Hello world");
+Helma Yunia Putri
+S1 - Akuntansi
+Universitas Nasional Pasim
