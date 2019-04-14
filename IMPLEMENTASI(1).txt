@@ -8,6 +8,11 @@ TULIS NAMA KALIAN
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 4.Novelina Erlin Saputi
 4. Helma Yunia Putri
 6. sri hayati
+=======
+5. Helma Yunia Putri
+>>>>>>> 2eb54ce2d8543ce816196925b94a6a8103fe8b22
+>>>>>>> 69472a5dd38b71825ef7a3dd3e4f580693cca611
