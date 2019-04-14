@@ -2,6 +2,12 @@ TULIS NAMA KALIAN
 1.Hafidh Almarogi
 2. Herdiana
 3.Saeful mizwar
+<<<<<<< HEAD
 4. wia handayani
 5. sri hayati
 
+=======
+<<<<<<< HEAD
+4.Novelina Erlin Saputi
+4. Helma Yunia Putri
+6. sri hayati
