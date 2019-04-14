@@ -4,5 +4,10 @@ TULIS NAMA KALIAN
 1.Hafidh Almarogi
 2. Herdiana
 3.Saeful mizwar
-4.Wia Handayani
+<<<<<<< HEAD
+
 >>>>>>> 6f029f88ba6f17833b31b2360a37ab00c3e68dc9
+=======
+4. Helma Yunia Putri
+5. Wia Handayani
+>>>>>>> 2eb54ce2d8543ce816196925b94a6a8103fe8b22
