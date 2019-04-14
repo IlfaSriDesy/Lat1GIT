@@ -1,6 +1,16 @@
 TULIS NAMA KALIAN
+
 1.Hafidh Almarogi
 2. Herdiana
 3.Saeful mizwar
 4. Helma Yunia Putri
+<<<<<<< HEAD
 5. Putri
+=======
+5.Rini Oktaviani
+
+
+
+
+
+>>>>>>> c690dfa5a045bc0eb0edfb54464a1895d97e3937
