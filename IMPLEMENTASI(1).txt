@@ -5,9 +5,16 @@ TULIS NAMA KALIAN
 2. Herdiana
 3.Saeful mizwar
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 6f029f88ba6f17833b31b2360a37ab00c3e68dc9
 =======
 4. Helma Yunia Putri
-5. Wia Handayani
+=======
+4.Novelina Erlin Saputri
+6. Wia Handayani
+
+=======
+4. Helma Yunia Putri
+>>>>>>> 5f697ee2ffcb46f9121eb4a95c7624130007235b
 >>>>>>> 2eb54ce2d8543ce816196925b94a6a8103fe8b22
