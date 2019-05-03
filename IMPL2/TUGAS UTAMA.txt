@@ -1,0 +1,13 @@
+TUGAS UTAMA
+
+1. clone atau pull project
+
+2. kerjakan TASK1 milik masing-masing (***jangan lupa, isi nama PIC)
+
+3. buat branch masing-masing
+
+4. push kerjaan pada branch masing-masing
+
+5. merge ke master (PASTIKAN TIDAK ADA CONFLICT dan ERROR)
+
+Good Luck ;)
