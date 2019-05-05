@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="project.bersama.model.DataModel" table="data1_tbl">
+        <id name="data1_id" column="data1_id" type="string">
+            <generator class="assigned" />
+        </id>
+        <property name="nama" column="nama"/>
+        <property name="tempat_lahir" column="tempat_lahir"/>
+        <property name="tanggal_lahir" column="tanggal_lahir"/>
+        <property name="profesi" column="profesi"/>
+        <property name="alamat" column="alamat"/>
+        <property name="nope" column="nope"/>
+        <property name="email" column="email"/>
+    </class>
+  
+
+</hibernate-mapping>
