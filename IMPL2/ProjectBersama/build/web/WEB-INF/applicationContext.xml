@@ -33,6 +33,7 @@
             <list>                                
                 <value>project/bersama/model/ContohModel.hbm.xml</value>
                 <value>project/bersama/model/Grup2Model.hbm.xml</value>
+                <value>project/bersama/model/MemberModel.hbm.xml</value>
             </list>  
         </property>  
         <property name="hibernateProperties">  
@@ -60,6 +61,6 @@
 <!--    <bean id="kelasService" class="pelatihan.java.springhibernate.service.impl.KelasServiceImpl"></bean>
     <bean id="kelasDao" class="pelatihan.java.springhibernate.dao.impl.KelasDaoImpl"></bean>-->
     
-
-
+    <bean id="memberServis" class="project.bersama.service.impl.MemberServiceImpl"></bean>
+    <bean id="memberDao" class="project.bersama.dao.impl.MemberDaoImpl"></bean>
 </beans>

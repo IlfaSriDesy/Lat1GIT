@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import project.bersama.dto.Grup2Dto;
 import project.bersama.service.Grup2Service;
+import project.bersama.dto.MemberDto;
+import project.bersama.service.MemberService;
 
 /**
  *
@@ -22,13 +24,24 @@ import project.bersama.service.Grup2Service;
 public class UtamaController {
     @Autowired
     Grup2Service grup2service;
+    
+    @Autowired
+    MemberService memberService;
+    
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String viewIndex(){
         return "index";
     }
     
     @RequestMapping(value = "/layar1", method = RequestMethod.GET)
-    public String viewLayar1(){
+    public String viewLayar1(ModelMap model)throws Exception{
+        try {
+            List<MemberDto> data=memberService.getData();
+            System.out.println(data);
+            model.addAttribute("datamember", data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "layar1";
     }
       
