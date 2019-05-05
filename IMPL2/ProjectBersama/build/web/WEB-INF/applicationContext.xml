@@ -32,6 +32,8 @@
         <property name="mappingResources">  
             <list>                                
                 <value>project/bersama/model/ContohModel.hbm.xml</value>
+                <value>project/bersama/model/Photo.hbm.xml</value>
+                
             </list>  
         </property>  
         <property name="hibernateProperties">  
@@ -53,6 +55,9 @@
     p:url="${jdbc.url}"
     p:username="${jdbc.username}"
     p:password="${jdbc.password}"/>
+
+<bean id="photoDao" class="project.bersama.daoImpl.PhotoDaoImpl"></bean>
+<bean id="photoService" class="project.bersama.serviceImpl.PhotoServiceImpl"></bean>
 
 <!--    <bean id="kelasService" class="pelatihan.java.springhibernate.service.impl.KelasServiceImpl"></bean>
     <bean id="kelasDao" class="pelatihan.java.springhibernate.dao.impl.KelasDaoImpl"></bean>-->
