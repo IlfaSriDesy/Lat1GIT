@@ -32,6 +32,8 @@
         <property name="mappingResources">  
             <list>                                
                 <value>project/bersama/model/ContohModel.hbm.xml</value>
+                <value>project/bersama/model/foodCategoryModel.hbm.xml</value>
+                <value>project/bersama/model/foodProductModel.hbm.xml</value>
             </list>  
         </property>  
         <property name="hibernateProperties">  
@@ -57,6 +59,8 @@
 <!--    <bean id="kelasService" class="pelatihan.java.springhibernate.service.impl.KelasServiceImpl"></bean>
     <bean id="kelasDao" class="pelatihan.java.springhibernate.dao.impl.KelasDaoImpl"></bean>-->
     
-
-
+    <bean id="foodCategoryService" class="project.bersama.service.impl.foodCategoryServiceImpl"></bean>
+    <bean id="foodProductService" class="project.bersama.service.impl.foodProductServiceImpl"></bean>
+    <bean id="foodCategoryDao" class="project.bersama.dao.impl.foodCategoryDaoImpl"></bean>
+    <bean id="foodProductDao" class="project.bersama.dao.impl.foodProductDaoImpl"></bean>
 </beans>
