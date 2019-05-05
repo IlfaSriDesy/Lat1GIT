@@ -77,7 +77,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD:IMPL2/ProjectBersama/web/WEB-INF/jsp/layar3.jsp
         <center>
         <table border="4" width="800" bgcolor="white">
         <tr>
@@ -104,9 +103,7 @@
         </c:forEach>
         </table>
     </body>
-=======
     </div>
 </body>
->>>>>>> 1c372de46fb78ee591679d9f44d2c5174b65369a:IMPL2/ProjectBersama/build/web/WEB-INF/jsp/layar1.jsp
 </html>
 
