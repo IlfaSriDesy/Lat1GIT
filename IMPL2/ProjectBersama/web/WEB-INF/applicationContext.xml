@@ -27,7 +27,7 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     
-    <bean id = "sessionFactory" class = "org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+   <bean id = "sessionFactory" class = "org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
         <property name="mappingResources">  
             <list>                                
@@ -36,6 +36,7 @@
                 <value>project/bersama/model/Grup2Model.hbm.xml</value>
                 <value>project/bersama/model/MemberModel.hbm.xml</value>
                 <value>project/bersama/model/DataModel.hbm.xml</value>
+                <value>project/bersama/model/Photo.hbm.xml</value>
             </list>  
         </property>  
         <property name="hibernateProperties">  
@@ -58,12 +59,15 @@
     p:username="${jdbc.username}"
     p:password="${jdbc.password}"/>
 
-
- <bean id="transaksipointService" class="project.bersama.service.impl.transaksipointServiceImpl"></bean>
+    
+    <bean id="transaksipointService" class="project.bersama.service.impl.transaksipointServiceImpl"></bean>
     <bean id="transaksipointDao" class="project.bersama.dao.impl.transaksipointDaoImpl"></bean>
     
     <bean id="grup2service" class="project.bersama.service.impl.Grup2ServiceImpl"></bean>
     <bean id="dataDao" class="project.bersama.dao.impl.PointDaoImpl"></bean>
+<bean id="photoDao" class="project.bersama.daoImpl.PhotoDaoImpl"></bean>
+<bean id="photoService" class="project.bersama.serviceImpl.PhotoServiceImpl"></bean>
+
 <!--    <bean id="kelasService" class="pelatihan.java.springhibernate.service.impl.KelasServiceImpl"></bean>
     <bean id="kelasDao" class="pelatihan.java.springhibernate.dao.impl.KelasDaoImpl"></bean>-->
     

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="project.bersama.model.Photo" table="photo_tbl">
+        <id name="photo_id" column="photo_id" type="int">
+            <generator class="native" />
+        </id>
+        <property name="photo_nm" column="photo_nm"/>
+    </class>
+  
+
+</hibernate-mapping>

@@ -1,6 +1,7 @@
 /*
 SQLyog Enterprise - MySQL GUI v7.02 
 <<<<<<< HEAD
+<<<<<<< HEAD
 MySQL - 5.6.21 : Database - projectbersama_db
 =======
 <<<<<<< HEAD
@@ -9,6 +10,9 @@ MySQL - 5.5.5-10.1.37-MariaDB : Database - projectbersama_db
 MySQL - 5.5.5-10.1.10-MariaDB : Database - projectbersama_db
 >>>>>>> a47cdfa6becf1bf165901e2ef796bc804d1db5ab
 >>>>>>> 1c372de46fb78ee591679d9f44d2c5174b65369a
+=======
+MySQL - 5.5.5-10.1.10-MariaDB : Database - projectbersama_db
+>>>>>>> 21332ac9a830e4145ae9f8d434969c6581b9065e
 *********************************************************************
 */
 
@@ -35,6 +39,7 @@ CREATE TABLE `contoh_tbl` (
 
 /*Data for the table `contoh_tbl` */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /*Table structure for table `transaksi_tbl` */
 
@@ -86,6 +91,21 @@ CREATE TABLE `member_tbl` (
 insert  into `member_tbl`(`member_id`,`member_nm`,`member_jk`,`member_point`) values ('01','wahid','laki','100'),('02','amel','perempuan','100'),('03','deded','laki','100'),('04','fahmi','laki','100'),('05','hafid','laki','100'),('06','helma','perempuan','100'),('07','herdi','laki','100'),('08','iyan','laki','100'),('09','monica','perempuan','100'),('10','novel','perempuan','100'),('11','putri','perempuan','100'),('12','saeful','laki','100'),('13','sri','perempuan','100'),('14','teguh','laki','100'),('15','rini','perempuan','100'),('16','wia','perempuan','100');
 >>>>>>> a47cdfa6becf1bf165901e2ef796bc804d1db5ab
 >>>>>>> 1c372de46fb78ee591679d9f44d2c5174b65369a
+=======
+/*Table structure for table `photo_tbl` */
+
+DROP TABLE IF EXISTS `photo_tbl`;
+
+CREATE TABLE `photo_tbl` (
+  `photo_id` int(11) NOT NULL AUTO_INCREMENT,
+  `photo_nm` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`photo_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+/*Data for the table `photo_tbl` */
+
+insert  into `photo_tbl`(`photo_id`,`photo_nm`) values (1,'kuc.jpg'),(2,'kucing.jpg'),(3,'panda.jpg');
+>>>>>>> 21332ac9a830e4145ae9f8d434969c6581b9065e
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
