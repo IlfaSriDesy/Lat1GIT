@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="project.bersama.model.foodCategoryModel" table="foodCategory_tbl">
+        <id name="foodCategory_id" column="foodCategory_id" type="string">
+            <generator class="assigned" />
+        </id>
+        <property name="foodCategory_nm" column="foodCategory_id"/>
+    </class>
+  
+
+</hibernate-mapping>
