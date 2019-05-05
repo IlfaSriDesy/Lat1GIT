@@ -5,9 +5,14 @@
  */
 package project.bersama.controller;
 
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import project.bersama.dto.Grup2Dto;
+import project.bersama.service.Grup2Service;
 
 /**
  *
@@ -15,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class UtamaController {
+    @Autowired
+    Grup2Service grup2service;
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String viewIndex(){
         return "index";
@@ -24,4 +31,16 @@ public class UtamaController {
     public String viewLayar1(){
         return "layar1";
     }
+      
+  @RequestMapping(value = "/layar2", method = RequestMethod.GET)
+    public String viewTabelPoint(ModelMap model){
+       try {
+            List<Grup2Dto> listDataDto = grup2service.getListPoint();
+            model.addAttribute("listDataDto", listDataDto);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+        return "layar2";
+    }
+    
 }
