@@ -14,7 +14,7 @@ import project.bersama.model.transaksipoint_tbl;
  *
  * @author acer v5
  */
-public class transaksipointDaoImpl extends hibernateUtil implements transaksipointDao{
+public class transaksipointDaoImpl extends HibernateUtil implements transaksipointDao{
     
 
     @Override

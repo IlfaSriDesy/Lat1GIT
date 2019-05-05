@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="project.bersama.model.Grup2Model" table="jenispoint_tbl">
+        <id name="jnspoint_id" column="jnspoint_id" type="string">
+            <generator class="assigned" />
+        </id>
+        <property name="jnspoint_nm" column="jnspoint_nm"/>
+        <property  name="jnspoint_nilai" column="jnspoint_nilai"/>
+    </class>
+
+</hibernate-mapping>
