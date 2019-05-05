@@ -151,8 +151,10 @@
                     </a>
                 </div>
                 <div class="col-sm-3 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                             <c:url var="layar6Url" value="/layar6.htm">        
+                            </c:url>  
+                            <a href="${layar6Url}" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
@@ -162,7 +164,8 @@
                 </div>
                 <div class="col-sm-3 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                    
+                    <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
