@@ -9,9 +9,13 @@
     <property name="hibernate.connection.password"/>
     <mapping resource="project/bersama/model/ContohModel.hbm.xml"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <mapping resource="project/bersama/model/Grup2Model.hbm.xml"/>
 =======
     <mapping resource="project/bersama/model/MemberModel.hbm.xml"/>
 >>>>>>> a47cdfa6becf1bf165901e2ef796bc804d1db5ab
+=======
+    <mapping resource="project/bersama/model/DataModel.hbm.xml"/>
+>>>>>>> 07e9ebe4063b721b9553c91ce13ede5a4a083098
   </session-factory>
 </hibernate-configuration>

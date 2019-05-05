@@ -6,6 +6,7 @@
 package project.bersama.controller;
 
 import java.util.List;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,6 +16,8 @@ import project.bersama.dto.Grup2Dto;
 import project.bersama.service.Grup2Service;
 import project.bersama.dto.MemberDto;
 import project.bersama.service.MemberService;
+import project.bersama.dto.DataDto;
+import project.bersama.service.Data1Service;
 
 /**
  *
@@ -22,17 +25,24 @@ import project.bersama.service.MemberService;
  */
 @Controller
 public class UtamaController {
+
     @Autowired
     Grup2Service grup2service;
     
     @Autowired
     MemberService memberService;
     
+
+    
+    @Autowired
+    Data1Service data1Service;
+
+
     @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public String viewIndex(){
+    public String viewIndex() {
         return "index";
     }
-    
+
     @RequestMapping(value = "/layar1", method = RequestMethod.GET)
     public String viewLayar1(ModelMap model)throws Exception{
         try {
@@ -56,4 +66,16 @@ public class UtamaController {
         return "layar2";
     }
     
+
+    @RequestMapping(value = "/layar7", method = RequestMethod.GET)
+    public String viewLayar7() {
+        return "layar7";
+    }
+
+    @RequestMapping(value = "/downloadExcelData1", method = RequestMethod.GET)
+    public org.springframework.web.servlet.ModelAndView downloadExcelData1(ModelMap model) throws Exception{
+        List<DataDto> listDtoData = data1Service.getlistData1();
+        System.out.println("Success to get the data");
+        return new org.springframework.web.servlet.ModelAndView("excelDownloadExample", "listDtoData", listDtoData);
+    }
 }

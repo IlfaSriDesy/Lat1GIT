@@ -34,6 +34,7 @@
                 <value>project/bersama/model/ContohModel.hbm.xml</value>
                 <value>project/bersama/model/Grup2Model.hbm.xml</value>
                 <value>project/bersama/model/MemberModel.hbm.xml</value>
+                <value>project/bersama/model/DataModel.hbm.xml</value>
             </list>  
         </property>  
         <property name="hibernateProperties">  
@@ -63,4 +64,7 @@
     
     <bean id="memberServis" class="project.bersama.service.impl.MemberServiceImpl"></bean>
     <bean id="memberDao" class="project.bersama.dao.impl.MemberDaoImpl"></bean>
+    <bean id="data1Service" class="project.bersama.service.impl.Data1ServiceImpl"></bean>
+    <bean id="data1Dao" class="project.bersama.dao.impl.Data1DaoImpl"></bean>
+
 </beans>
