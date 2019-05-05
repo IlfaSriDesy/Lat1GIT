@@ -121,7 +121,9 @@
                     </a>
                 </div>
                 <div class="col-sm-3 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <c:url var="tabelTransaksiUrl" value="/tabelTransaksi.htm">        
+                    </c:url>  
+                    <a href="${tabelTransaksiUrl}" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
