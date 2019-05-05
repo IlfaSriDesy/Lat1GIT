@@ -51,10 +51,32 @@
                         <center><h2>Project Title</h2></center>
                         <hr class="star-primary">
                         <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                        <p>Do something!</p>
-                    </div>
+                        <table border="1" width="600" id="table">
+                            <tr bgcolor="gold">
+                                <th>No</th> 
+                                <th>Id Member</th>            
+                                <th>Nama Member</th>            
+                                <th>Jenis Kelamin Member</th>
+                                <th>Point Member</th>          
+                                
+                            </tr>        
+                            <c:set var="index" value="1"/>
+                            <c:forEach var="listKelas" items="${datamember}">
+                                <tr>  
+                                    <td>${index}</td>
+                                    <td>${listKelas.member_id}</td>
+                                    <td>${listKelas.member_nm}</td>
+                                    <td>${listKelas.member_jk}</td>
+                                    <td>${listKelas.member_point}</td>               
+                                    
+                                    
+                                </tr>            
+                                <c:set var="index" value="${index+1}"/>
+                            </c:forEach>
+                    </div></table>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>

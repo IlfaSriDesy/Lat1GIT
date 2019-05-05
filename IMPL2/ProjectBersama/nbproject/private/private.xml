@@ -6,6 +6,9 @@
             <file>file:/D:/PENITIPAN/MALWARE%2016/HELMA/kelompok6/Lat1GIT/IMPL2/ProjectBersama/web/WEB-INF/applicationContext.xml</file>
             <file>file:/D:/PENITIPAN/MALWARE%2016/HELMA/kelompok6/Lat1GIT/IMPL2/ProjectBersama/web/WEB-INF/dispatcher-servlet.xml</file>
             <file>file:/D:/PENITIPAN/MALWARE%2016/HELMA/kelompok6/Lat1GIT/IMPL2/ProjectBersama/src/java/project/bersama/controller/UtamaController.java</file>
+            <file>file:/D:/PENITIPAN/MALWARE%2016/HELMA/kelompok6/Lat1GIT/IMPL2/ProjectBersama/src/java/project/bersama/dao/impl/Data1DaoImpl.java</file>
+            <file>file:/D:/PENITIPAN/MALWARE%2016/HELMA/kelompok6/Lat1GIT/IMPL2/ProjectBersama/src/java/project/bersama/dao/impl/MemberDaoImpl.java</file>
+            <file>file:/D:/PENITIPAN/MALWARE%2016/HELMA/kelompok6/Lat1GIT/IMPL2/ProjectBersama/src/java/hibernate.cfg.xml</file>
         </group>
     </open-files>
 </project-private>
