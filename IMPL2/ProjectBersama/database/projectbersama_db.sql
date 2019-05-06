@@ -2,6 +2,11 @@
 SQLyog Enterprise - MySQL GUI v7.02 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+MySQL - 5.5.5-10.1.10-MariaDB : Database - projectbersama_db
+=======
+>>>>>>> 9137e75825fbe13cb7fa00555f0c6ec0c2ad4324
+<<<<<<< HEAD
 MySQL - 5.6.21 : Database - projectbersama_db
 =======
 <<<<<<< HEAD
@@ -10,9 +15,13 @@ MySQL - 5.5.5-10.1.37-MariaDB : Database - projectbersama_db
 MySQL - 5.5.5-10.1.10-MariaDB : Database - projectbersama_db
 >>>>>>> a47cdfa6becf1bf165901e2ef796bc804d1db5ab
 >>>>>>> 1c372de46fb78ee591679d9f44d2c5174b65369a
+<<<<<<< HEAD
 =======
 MySQL - 5.5.5-10.1.10-MariaDB : Database - projectbersama_db
 >>>>>>> 21332ac9a830e4145ae9f8d434969c6581b9065e
+=======
+>>>>>>> 59e7156e5c89d82150f208a86495cf226fb44436
+>>>>>>> 9137e75825fbe13cb7fa00555f0c6ec0c2ad4324
 *********************************************************************
 */
 
@@ -22,6 +31,8 @@ MySQL - 5.5.5-10.1.10-MariaDB : Database - projectbersama_db
 
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+<<<<<<< HEAD
+=======
 
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`projectbersama_db` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
@@ -109,3 +120,4 @@ insert  into `photo_tbl`(`photo_id`,`photo_nm`) values (1,'kuc.jpg'),(2,'kucing.
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+>>>>>>> 59e7156e5c89d82150f208a86495cf226fb44436
