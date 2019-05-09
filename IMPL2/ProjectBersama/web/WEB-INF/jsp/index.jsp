@@ -135,7 +135,9 @@
                     </a>
                 </div>
                 <div class="col-sm-3 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                    <c:url var="layar4Url" value="/layar4.htm">        
+                    </c:url>
+                    <a href="${layar4Url}" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
