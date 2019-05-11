@@ -13,12 +13,9 @@
     
 >>>>>>> 21332ac9a830e4145ae9f8d434969c6581b9065e
 
-    <system systemId="http://www.springframework.org/schema/context/spring-context-4.0.xsd" uri="www.springframework.org/schema/context/spring-context-4.0.xsd"/>
-    <system systemId="http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd" uri="www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"/>
-    <system systemId="http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" uri="www.springframework.org/schema/tx/spring-tx-4.0.xsd"/>
-    <system systemId="http://www.springframework.org/schema/context/spring-context-4.0.xsd" uri="www.springframework.org/schema/context/spring-context-4.0.xsd"/>
-    <system systemId="http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd" uri="www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"/>
-    <system systemId="http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" uri="www.springframework.org/schema/tx/spring-tx-4.0.xsd"/>
+    
+    
+    
     <system systemId="http://www.springframework.org/schema/context/spring-context-4.0.xsd" uri="www.springframework.org/schema/context/spring-context-4.0.xsd"/>
     <system systemId="http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd" uri="www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"/>
     <system systemId="http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" uri="www.springframework.org/schema/tx/spring-tx-4.0.xsd"/>
@@ -41,4 +38,11 @@
 >>>>>>> 07e9ebe4063b721b9553c91ce13ede5a4a083098
 >>>>>>> 59e7156e5c89d82150f208a86495cf226fb44436
 >>>>>>> 9137e75825fbe13cb7fa00555f0c6ec0c2ad4324
+
+    <system systemId="http://www.springframework.org/schema/context/spring-context-4.0.xsd" uri="www.springframework.org/schema/context/spring-context-4.0.xsd"/>
+    <system systemId="http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd" uri="www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"/>
+    <system systemId="http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" uri="www.springframework.org/schema/tx/spring-tx-4.0.xsd"/>
+    <system systemId="http://www.springframework.org/schema/context/spring-context-4.0.xsd" uri="www.springframework.org/schema/context/spring-context-4.0.xsd"/>
+    <system systemId="http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd" uri="www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"/>
+    <system systemId="http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" uri="www.springframework.org/schema/tx/spring-tx-4.0.xsd"/>
 </catalog>
