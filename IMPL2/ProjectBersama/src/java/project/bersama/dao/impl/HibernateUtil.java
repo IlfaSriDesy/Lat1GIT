@@ -5,32 +5,23 @@
  */
 package project.bersama.dao.impl;
 
-/**
- *
- * @author Eki Hendrawanbrata
- */
-import org.hibernate.Query;
+import javax.jms.Session;
+import javax.management.Query;
 import org.hibernate.SQLQuery;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Hibernate Utility class with a convenient method to get Session Factory
- * object.
  *
- * @author hendri
+ * @author ASUS
  */
 @Transactional
 public class HibernateUtil {
-
     @Autowired
     public SessionFactory sessionFactory;
     
-    public Session getSession() {
+    public org.hibernate.Session getSession() {
         return sessionFactory.getCurrentSession();
     }
     public void setSessionFactory(SessionFactory sessionFactory) {
@@ -41,12 +32,11 @@ public class HibernateUtil {
         return sessionFactory;
     }
     
-    protected Query createQuery(String query){
+    protected org.hibernate.Query createQuery(String query){
         return getSession().createQuery(query);
     }
 
     protected SQLQuery createNativeQuery(String query){
         return getSession().createSQLQuery(query);
     }
-
 }

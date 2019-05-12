@@ -32,6 +32,7 @@
         <property name="mappingResources">  
             <list>                                
                 <value>project/bersama/model/ContohModel.hbm.xml</value>
+<<<<<<< HEAD
                 <value>project/bersama/model/foodCategoryModel.hbm.xml</value>
                 <value>project/bersama/model/foodProductModel.hbm.xml</value>
                 <value>project/bersama/model/transaksi.hbm.xml</value>
@@ -39,6 +40,9 @@
                 <value>project/bersama/model/MemberModel.hbm.xml</value>
                 <value>project/bersama/model/DataModel.hbm.xml</value>
                 <value>project/bersama/model/Photo.hbm.xml</value>
+=======
+                <value>project/bersama/model/LayerDelapanModel.hbm.xml</value>
+>>>>>>> 41e9101c1278db5501527ebb9dfefc8a05ece51d
             </list>  
         </property>  
         <property name="hibernateProperties">  
@@ -61,6 +65,7 @@
     p:username="${jdbc.username}"
     p:password="${jdbc.password}"/>
 
+<<<<<<< HEAD
     
     <bean id="transaksipointService" class="project.bersama.service.impl.transaksipointServiceImpl"></bean>
     <bean id="transaksipointDao" class="project.bersama.dao.impl.transaksipointDaoImpl"></bean>
@@ -81,5 +86,9 @@
     <bean id="memberDao" class="project.bersama.dao.impl.MemberDaoImpl"></bean>
     <bean id="data1Service" class="project.bersama.service.impl.Data1ServiceImpl"></bean>
     <bean id="data1Dao" class="project.bersama.dao.impl.Data1DaoImpl"></bean>
+=======
+    <bean id="layerService" class="project.bersama.service.impl.LayerDelapanImpl"></bean>
+    <bean id="layerDao" class="project.bersama.dao.impl.LayerDelapanDaoImpl"></bean>
+>>>>>>> 41e9101c1278db5501527ebb9dfefc8a05ece51d
 
 </beans>

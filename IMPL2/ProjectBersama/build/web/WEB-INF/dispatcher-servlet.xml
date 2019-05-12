@@ -32,6 +32,7 @@
           p:prefix="/WEB-INF/jsp/"
           p:suffix=".jsp" />
     
+<<<<<<< HEAD
     <bean id="viewResolver1" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
         <property name="order" value="1"/>
         <property name="basename" value="views_properties"/>
@@ -41,4 +42,15 @@
     The index controller.
     -->
           <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+=======
+<!--    <bean id="viewResolver1" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+        <property name="order" value="1"/>
+        <property name="basename" value="views"/>
+    </bean>-->
+    <!--<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" p:basename="WEB-INF/message/messages"/>-->
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+    
+    
+>>>>>>> 41e9101c1278db5501527ebb9dfefc8a05ece51d
 </beans>

@@ -8,6 +8,7 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password"/>
     <mapping resource="project/bersama/model/ContohModel.hbm.xml"/>
+<<<<<<< HEAD
 
     <mapping resource="project/bersama/model/foodCategoryModel.hbm.xml"/>
     <mapping resource="project/bersama/model/foodProductModel.hbm.xml"/>
@@ -24,5 +25,8 @@
 
     <mapping resource="project/bersama/model/Photo.hbm.xml"/>
 
+=======
+    <mapping resource="project/bersama/model/LayerDelapanModel.hbm.xml"/>
+>>>>>>> 41e9101c1278db5501527ebb9dfefc8a05ece51d
   </session-factory>
 </hibernate-configuration>

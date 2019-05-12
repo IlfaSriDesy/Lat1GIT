@@ -172,6 +172,7 @@
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
 
                         <div class="caption">
+<<<<<<< HEAD
                             <c:url var="layar7Url" value="/layar7.htm">        
                             </c:url>  
                             <a href="${layar7Url}" class="portfolio-link" data-toggle="modal">
@@ -182,6 +183,23 @@
                                 </div>
                                 <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
                             </a>
+=======
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-3 portfolio-item">
+                    <c:url var="layar8Url" value="/importData.htm">        
+                    </c:url>  
+                    <a href="${layar8Url}" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+>>>>>>> 41e9101c1278db5501527ebb9dfefc8a05ece51d
                         </div>
                         <div class="col-sm-3 portfolio-item">
                             <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">

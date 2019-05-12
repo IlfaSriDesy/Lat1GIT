@@ -9,11 +9,18 @@ import java.util.List;
 import java.util.List;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.ResponseBody;
 import project.bersama.dto.TampMainDto;
 import project.bersama.dto.foodCategoryDto;
@@ -46,6 +53,10 @@ import org.springframework.web.servlet.ModelAndView;
 import project.bersama.dto.PhotoDto;
 import project.bersama.service.PhotoService;
 import project.bersama.service.transaksipointService;
+import project.bersama.dto.LayerDelapanDto;
+import project.bersama.dto.pathimportDto;
+import project.bersama.service.LayerDelapanService;
+
 
 /**
  *
@@ -53,6 +64,7 @@ import project.bersama.service.transaksipointService;
  */
 @Controller
 public class UtamaController {
+
 
     @Autowired
     foodProductService foodProductService;
@@ -77,7 +89,12 @@ public class UtamaController {
  
     @Autowired
     PhotoService photoService;
+
     
+    @Autowired
+    LayerDelapanService layerService;
+    
+     String tmpPath="";
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String viewIndex() {
         return "index";
@@ -122,6 +139,7 @@ public class UtamaController {
         return "layar1";
     }
     
+
     @RequestMapping(value = "/tabelTransaksi", method = RequestMethod.GET)
     public String tabelTransaksi(ModelMap model){
         try {
@@ -167,6 +185,53 @@ public class UtamaController {
         return "layar5";
     }
     
+    @RequestMapping(value = "/importData", method = RequestMethod.GET)
+    public String viewImportData(ModelMap model){
+        pathimportDto importDto = new pathimportDto();
+        model.addAttribute("importDto", importDto);
+        return "Layar8";
+    }
+    @RequestMapping(value = "/uploadDataDua", method = RequestMethod.POST)
+    public String uploadDataDua(pathimportDto importDto, ModelMap model) throws Exception {
+        if (!importDto.getFile().isEmpty()) {
+//            try {
+            byte[] bytes = importDto.getFile().getBytes();
+
+            // Creating the directory to store file
+            String rootPath = "C:\\";
+            File dir = new File(rootPath);//rootPath itu url nya..
+            if (!dir.exists()) {
+                dir.mkdirs();//mkdirs() untuk membuat sebuah direktori baru, terdapat pd klas file
+            }
+
+            File serverFile = new File(dir.getAbsolutePath()
+                    + File.separator + importDto.getFile().getOriginalFilename());
+            BufferedOutputStream stream = new BufferedOutputStream(
+                    new FileOutputStream(serverFile));//pembacaan data binary dari sebuah file
+            stream.write(bytes);
+            stream.close();
+        }
+        String rootPath = "C:\\" + importDto.getPath();
+        tmpPath = rootPath;
+        model.addAttribute("importDto", importDto);
+        List<LayerDelapanDto> listDto = layerService.getListDataExcelData(rootPath);
+        model.addAttribute("listDto", listDto);
+        return "Layar8";
+    }
+    
+    @RequestMapping(value = "/saveImportData", method = RequestMethod.GET)
+    public String saveImportData(ModelMap model) throws Exception {
+        try {
+            pathimportDto importDto = new pathimportDto();
+            model.addAttribute("importDto", importDto);
+            
+            layerService.saveDataExcelData(tmpPath);
+            return "redirect:importData.htm?success=true";
+        } catch (Exception e) {
+            return "redirect:importData.htm?success=false";
+        }
+
+    }
     @RequestMapping(value = "/saveUpload", method = RequestMethod.POST)//
     public @ResponseBody String saveUploadFoto(@ModelAttribute PhotoDto dto, ModelMap model) {
     
@@ -197,5 +262,11 @@ public class UtamaController {
                 return "file kosong " + dto.getFile().getName();
         }
     }
+    }
+
     
-}
+    
+    
+    
+    
+  
