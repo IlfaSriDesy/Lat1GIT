@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="project.bersama.model.LayerDelapan"  table="data2_tbl">
+        <id name="data2_id" column="data2_id" type="string">
+            <generator class="assigned" />
+        </id>
+        <property name="kd_produk" column="kd_produk"/>
+        <property name="nm_produk" column="nm_produk"/>
+        <property name="kategori_produk" column="kategori_produk"/>
+        <property name="stok" column="stok"/>
+    </class>
+</hibernate-mapping>

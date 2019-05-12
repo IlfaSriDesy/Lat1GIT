@@ -171,7 +171,9 @@
                     </a>
                 </div>
                 <div class="col-sm-3 portfolio-item">
-                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
+                    <c:url var="layar8Url" value="/importData.htm">        
+                    </c:url>  
+                    <a href="${layar8Url}" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
