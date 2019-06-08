@@ -6,14 +6,6 @@
 package project.bersama.controller;
 import com.google.gson.Gson;
 import java.util.List;
-import java.util.List;
-
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +19,6 @@ import project.bersama.dto.foodCategoryDto;
 import project.bersama.dto.foodProductDto;
 import project.bersama.service.foodCategoryService;
 import project.bersama.service.foodProductService;
-import project.bersama.dao.transaksipointDao;
 
 import project.bersama.dto.transaksipointDto;
 import project.bersama.dto.Grup2Dto;
@@ -42,6 +33,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
+import project.bersama.dto.FoodDto;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.ui.ModelMap;
@@ -55,6 +47,7 @@ import project.bersama.service.PhotoService;
 import project.bersama.service.transaksipointService;
 import project.bersama.dto.LayerDelapanDto;
 import project.bersama.dto.pathimportDto;
+import project.bersama.service.FoodService;
 import project.bersama.service.LayerDelapanService;
 
 
@@ -81,7 +74,8 @@ public class UtamaController {
     @Autowired
     MemberService memberService;
     
-
+    @Autowired
+    FoodService foodservice;
     
     @Autowired
     Data1Service data1Service;
@@ -94,7 +88,7 @@ public class UtamaController {
     @Autowired
     LayerDelapanService layerService;
     
-     String tmpPath="";
+    String tmpPath="";
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String viewIndex() {
         return "index";
@@ -103,6 +97,17 @@ public class UtamaController {
     @RequestMapping(value = "/layar1", method = RequestMethod.GET)
     public String viewLayar1() {
         return "layar1";
+    }
+    @RequestMapping(value ="/layar4", method = RequestMethod.GET)
+    public String viewLayar4(){
+        return "layar4";
+    }
+    @RequestMapping(value ="/getauto", method=RequestMethod.GET)
+    @ResponseBody
+    public String getAuto() throws Exception{
+        List<FoodDto> listAuto = foodservice.getListFood();
+        return new Gson().toJson(listAuto);
+        
     }
 
     @RequestMapping(value = "/layar6", method = RequestMethod.GET)
@@ -134,7 +139,6 @@ public class UtamaController {
             System.out.println(data);
             model.addAttribute("datamember", data);
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return "layar1";
     }
@@ -146,7 +150,6 @@ public class UtamaController {
             List<transaksipointDto> listTransDto = transService.getListDataTransaksi();
             model.addAttribute("listTransDto", listTransDto);
         } catch (Exception e) {
-            e.printStackTrace();
         } 
         return "layar3";
     }
@@ -156,7 +159,6 @@ public class UtamaController {
             List<Grup2Dto> listDataDto = grup2service.getListPoint();
             model.addAttribute("listDataDto", listDataDto);
         } catch (Exception e) {
-            e.printStackTrace();
         } 
         return "layar2";
     }
@@ -206,10 +208,11 @@ public class UtamaController {
 
             File serverFile = new File(dir.getAbsolutePath()
                     + File.separator + importDto.getFile().getOriginalFilename());
-            BufferedOutputStream stream = new BufferedOutputStream(
-                    new FileOutputStream(serverFile));//pembacaan data binary dari sebuah file
-            stream.write(bytes);
-            stream.close();
+            try (BufferedOutputStream stream = new BufferedOutputStream(
+                    new FileOutputStream(serverFile)) //pembacaan data binary dari sebuah file
+            ) {
+                stream.write(bytes);
+            }
         }
         String rootPath = "C:\\" + importDto.getPath();
         tmpPath = rootPath;
@@ -247,10 +250,11 @@ public class UtamaController {
                 
                 File serverFile = new File(dir.getAbsolutePath()
                                 + File.separator + dto.getFile().getOriginalFilename());
-                BufferedOutputStream stream = new BufferedOutputStream(
-                                new FileOutputStream(serverFile));//pembacaan data binary dari sebuah file
-                stream.write(bytes);
-                stream.close();                  
+                try (BufferedOutputStream stream = new BufferedOutputStream(
+                        new FileOutputStream(serverFile)) //pembacaan data binary dari sebuah file
+                ) {
+                    stream.write(bytes);                  
+                }
                 ModelAndView mdl = new ModelAndView();
                 photoService.saveDataPhoto(dto);  
                 return "sukses upload file" + dto.getFile().getName();
