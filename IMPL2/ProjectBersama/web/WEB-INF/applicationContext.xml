@@ -34,6 +34,7 @@
                 <value>project/bersama/model/ContohModel.hbm.xml</value>
                 <value>project/bersama/model/foodCategoryModel.hbm.xml</value>
                 <value>project/bersama/model/foodProductModel.hbm.xml</value>
+                <value>project/bersama/model/FoodModel.hbm.xml</value>
                 <value>project/bersama/model/transaksi.hbm.xml</value>
                 <value>project/bersama/model/Grup2Model.hbm.xml</value>
                 <value>project/bersama/model/MemberModel.hbm.xml</value>
@@ -62,6 +63,7 @@
     p:username="${jdbc.username}"
     p:password="${jdbc.password}"/>
 
+
     
     <bean id="transaksipointService" class="project.bersama.service.impl.transaksipointServiceImpl"></bean>
     <bean id="transaksipointDao" class="project.bersama.dao.impl.transaksipointDaoImpl"></bean>
@@ -84,5 +86,8 @@
     <bean id="data1Dao" class="project.bersama.dao.impl.Data1DaoImpl"></bean>
     <bean id="layerService" class="project.bersama.service.impl.LayerDelapanImpl"></bean>
     <bean id="layerDao" class="project.bersama.dao.impl.LayerDelapanDaoImpl"></bean>
+
+    <bean id="datafood" class="project.bersama.dao.impl.FoodDaoImpl"></bean>
+    <bean id="foodservice" class="project.bersama.service.impl.FoodServiceImpl"> </bean>
 
 </beans>
